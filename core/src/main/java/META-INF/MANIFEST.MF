@@ -1,0 +1,56 @@
+Manifest-Version: 1.0
+Class-Path: regexp-1.2.jar axis2-jaxws-integration-1.6.2.jar bcel-5.1.
+ jar maven-settings-2.0.7.jar wagon-file-1.0-alpha-5.jar wstx-asl-3.2.
+ 9.jar doxia-sink-api-1.0-alpha-4.jar jaxb-impl-1.0.6.jar wagon-ssh-1.
+ 0-alpha-5.jar maven-monitor-2.0.jar jaxb-libs-1.0.6.jar spring-aop-4.
+ 3.0.RELEASE.jar jdom-1.1.jar geronimo-annotation_1.0_spec-1.1.jar ant
+ -1.7.0.jar wagon-http-lightweight-1.0-alpha-5.jar javax.transaction-a
+ pi-1.2.jar geronimo-jaxws_2.2_spec-1.0.jar jaxb-xjc-2.1.7.jar sqljdbc
+ 4-4.0.jar spring-context-support-4.3.0.RELEASE.jar axis2-json-1.6.2.j
+ ar axis2-xmlbeans-1.6.2.jar axis2-clustering-1.6.2.jar axis-jaxrpc-1.
+ 4.jar axis2-jibx-1.6.2.jar axis2-adb-codegen-1.6.2.jar commons-dbcp2-
+ 2.1.1.jar axis2-transport-http-1.6.2.jar woden-impl-dom-1.0M9.jar xml
+ -resolver-1.2.jar maven-plugin-api-2.0.7.jar maven-plugin-parameter-d
+ ocumenter-2.0.jar spring-core-4.3.0.RELEASE.jar axis2-jaxws-1.6.2.jar
+  maven-error-diagnostics-2.0.jar maven-artifact-manager-2.0.7.jar jav
+ ax.servlet-api-3.1.0.jar junit-4.12.jar ant-launcher-1.7.0.jar xerces
+ Impl-2.4.0.jar woden-api-1.0M9.jar axis2-mtompolicy-1.6.2.jar axis2-j
+ ava2wsdl-1.6.2.jar geronimo-jta_1.1_spec-1.1.jar xsdlib-20060615.jar 
+ axis2-spring-1.6.2.jar maven-plugin-descriptor-2.0.jar javax.ejb-api-
+ 3.2.jar spring-jdbc-4.3.0.RELEASE.jar xalan-2.7.0.jar spring-beans-4.
+ 3.0.RELEASE.jar commons-lang-2.6.jar core-1.0.0.jar maven-profile-2.0
+ .7.jar hapi-0.5.1.jar axis2-transport-local-1.6.2.jar maven-plugin-te
+ sting-harness-1.1.jar tribes-6.0.16.jar axis2-mar-maven-plugin-1.6.2.
+ jar spring-tx-4.3.0.RELEASE.jar jaxb-api-1.0.jar geronimo-javamail_1.
+ 4_spec-1.6.jar plexus-archiver-1.0-alpha-7.jar geronimo-ws-metadata_2
+ .0_spec-1.1.2.jar servlet-api-2.3.jar bsf-2.4.0.jar jsr311-api-1.0.ja
+ r axis2-resource-bundle-1.6.2.jar js-1.6R7.jar axis2-aar-maven-plugin
+ -1.6.2.jar axis2-codegen-1.6.2.jar axiom-impl-1.2.13.jar org.apache.a
+ xis2.osgi-1.6.2.jar apache-mime4j-core-0.7.2.jar jboss-j2ee-4.2.2.GA.
+ jar jaxen-1.1.3.jar axiom-dom-1.2.13.jar maven-project-2.0.7.jar plex
+ us-interactivity-api-1.0-alpha-4.jar axis-wsdl4j-1.5.1.jar commons-cl
+ i-1.2.jar commons-pool-1.5.4.jar mybatis-3.4.1.jar log4j-1.2.17.jar m
+ aven-artifact-2.0.8.jar maven-model-2.0.7.jar XmlSchema-1.4.7.jar cla
+ ssworlds-1.1-alpha-2.jar maven-plugin-registry-2.0.7.jar commons-dbcp
+ -1.4.jar axis-1.4.jar geronimo-activation_1.1_spec-1.0.2.jar spring-w
+ ebmvc-4.3.0.RELEASE.jar plexus-container-default-1.0-alpha-9-stable-1
+ .jar axis-saaj-1.4.jar juli-6.0.16.jar mybatis-spring-1.3.0.jar neeth
+ i-3.0.2.jar maven-common-artifact-filters-1.2.jar maven-core-2.0.jar 
+ axis2-repo-maven-plugin-1.6.2.jar hamcrest-core-1.3.jar axis2-jaxbri-
+ 1.6.2.jar jaxws-tools-2.1.3.jar axis2-ant-plugin-1.6.2.jar braid-base
+ -1.2.2.jar maven-archiver-2.2.jar wagon-provider-api-1.0-beta-2.jar i
+ sorelax-20030108.jar axis2-metadata-1.6.2.jar jibx-run-1.2.jar maven-
+ repository-metadata-2.0.7.jar axis2-wsdl2code-maven-plugin-1.6.2.jar 
+ commons-discovery-0.2.jar axis2-integration-1.6.2.jar jnp-client-4.2.
+ 2.GA.jar commons-codec-1.2.jar commons-fileupload-1.2.jar commons-log
+ ging-1.2.jar commons-pool2-2.4.2.jar axiom-api-1.2.13.jar spring-expr
+ ession-4.3.0.RELEASE.jar plexus-utils-1.4.9.jar axis2-adb-1.6.2.jar m
+ aven-reporting-api-2.0.jar jsch-0.1.23.jar axis2-kernel-1.6.2.jar htt
+ pcore-4.0.jar jibx-bind-1.2.jar commons-httpclient-3.1.jar woden-impl
+ -commons-1.0M9.jar jettison-1.0-RC2.jar spring-web-4.3.0.RELEASE.jar 
+ commons-io-1.4.jar axis2-java2wsdl-maven-plugin-1.6.2.jar relaxngData
+ type-20020414.jar geronimo-saaj_1.3_spec-1.0.1.jar wsdl4j-1.6.2.jar a
+ xis2-saaj-1.6.2.jar xmlbeans-2.3.0.jar spring-context-4.3.0.RELEASE.j
+ ar geronimo-stax-api_1.0_spec-1.0.1.jar freemarker-2.3.23.jar
+Main-Class: com.hinacom.pix.ihe.PixPdqServer
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- The PIX Consumer Connections for PIX Update Notification Transaction -->
+
+<Configuration>
+    <StandardConnection name="test1">
+        <!--The host name of the PIX Consumer-->
+        <HostName>localhost</HostName>
+        <!--The port for PIX Update Notification-->
+        <Port>3600</Port>
+        <Identifier name="SendingApplication">
+            <NamespaceId>PAT_IDENTITY_X_REF_MGR_MISYS</NamespaceId>
+        </Identifier>
+        <Identifier name="SendingFacility">
+            <NamespaceId>ALLSCRIPTS</NamespaceId>
+        </Identifier>
+        <Identifier name="ReceivingApplication">
+            <NamespaceId>EHR_MISYS</NamespaceId>
+        </Identifier>
+        <Identifier name="ReceivingFacility">
+            <NamespaceId>MISYS</NamespaceId>
+        </Identifier>
+
+        <!-- This property is for test purpose, which would not actually 
+             submit PIX Update Notification. It defaults to false. -->
+        <Property name="DoNotNotify" value="false" />
+
+   	    <IncludeFile name="PixPdqClientDomains.xml" />
+        
+    </StandardConnection>
+
+
+</Configuration>

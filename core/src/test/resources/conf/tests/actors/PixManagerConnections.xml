@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- The PIX Manager Actor Connections -->
+
+<Configuration>
+    <StandardConnection name="misys-pix-manager">
+        <!--The host name of the PIX Manager Server-->
+        <HostName>localhost</HostName>
+        <!--The port for PIX transaction-->
+        <Port>3600</Port>
+        <Identifier name="ReceivingApplication">
+            <NamespaceId>EHR_MISYS</NamespaceId>
+        </Identifier>
+        <Identifier name="ReceivingFacility">
+            <NamespaceId>MISYS</NamespaceId>
+        </Identifier>
+
+        <!-- pixManagerAdapter - required :
+            The java adapter class that provides the patient data source for this Pix Manager (required).
+            This class must implement org.openhealthexchange.openpixpdq.ihe.IPixManagerAdapter -->
+         <Property name="pixManagerAdapter" value="com.hinacom.pix.adapter.PixManagerAdapter" />
+        <!-- Configuration file for each client domains -->
+	    <IncludeFile name="PixPdqClientDomains.xml" />
+    </StandardConnection>
+
+
+</Configuration>

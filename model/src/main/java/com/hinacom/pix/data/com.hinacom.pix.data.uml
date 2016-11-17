@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.hinacom.pix.data.Patient</OriginalElement>
+  <nodes>
+    <node x="380.0" y="4.0">com.hinacom.pix.data.PersonIdentifier</node>
+    <node x="0.0" y="175.0">com.hinacom.pix.data.MessageHeader</node>
+    <node x="0.0" y="0.0">com.hinacom.pix.data.DriversLicense</node>
+    <node x="189.0" y="0.0">com.hinacom.pix.data.PersonName</node>
+    <node x="213.5" y="90.0">com.hinacom.pix.data.Patient</node>
+    <node x="376.5" y="90.5">com.hinacom.pix.data.PatientIdentifier</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.hinacom.pix.data.PatientIdentifier" target="com.hinacom.pix.data.PersonIdentifier">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.hinacom.pix.data.Patient" target="com.hinacom.pix.data.PatientIdentifier">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.hinacom.pix.data.Patient" target="com.hinacom.pix.data.PersonIdentifier">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.hinacom.pix.data.Patient" target="com.hinacom.pix.data.PersonName">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.hinacom.pix.data.Patient" target="com.hinacom.pix.data.DriversLicense">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="281.5" y="107.5" />
+  <SelectedNodes>
+    <node>com.hinacom.pix.data.Patient</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

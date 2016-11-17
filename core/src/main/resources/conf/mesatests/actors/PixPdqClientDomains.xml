@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- The Domain of Each PIX and PDQ Client -->
+
+<Configuration>
+     <!--To configure each PIX/PDQ client, always use type="domain" -->
+     <Identifier type="domain" name="HIMSS2005">
+         <NamespaceId>HIMSS2005</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2005.1.1</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+     <Identifier type="domain" name="XREF2005">
+         <NamespaceId>XREF2005</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2005.1.2</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+     <Identifier type="domain" name="NIST">
+         <NamespaceId>NIST</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2005.3.7</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+     <Identifier type="domain" name="GLOBAL">
+         <NamespaceId>IHENA</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2009.1.2.300</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+     <Identifier type="domain" name="IHE LOCAL">
+         <NamespaceId>IHELOCAL</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2009.1.2.310</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+     <Identifier type="domain" name="For PCD systems">
+         <NamespaceId>PAMX</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2009.1.2.315</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+     <Identifier type="domain" name="PACS_ACUO">
+         <NamespaceId>ACUO</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2009.1.2.320</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+     <Identifier type="domain" name="PACS_AGFA">
+         <NamespaceId>AGFA</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2009.1.2.325</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+     <Identifier type="domain" name="CONTENT_CREATOR_ALERT">
+         <NamespaceId>ALC1</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2009.1.2.330</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+     <Identifier type="domain" name="CONTENT_CONSUMER_ALERT">
+         <NamespaceId>ALCO</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2009.1.2.331</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+     <Identifier type="domain" name="EHR_ALLSCRIPTS_CONNECT">
+         <NamespaceId>ALEH</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2009.1.2.335</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+     <Identifier type="domain" name="EHR_ALLSCRIPTS_ENTERPRISE">
+         <NamespaceId>ALE1</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2009.1.2.340</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+     <Identifier type="domain" name="EHR_ALLSCRIPTS_PROFESSIONAL">
+         <NamespaceId>ALE2</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2009.1.2.341</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+     <Identifier type="domain" name="EHR_BLUEWARE">
+         <NamespaceId>BLUE</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2009.1.2.342</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+     <Identifier type="domain" name="PHR_CAPMED">
+         <NamespaceId>CAPH</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2009.1.2.343</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+     <Identifier type="domain" name="CIS_CPSI">
+         <NamespaceId>CPCI</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2009.1.2.344</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+     <Identifier type="domain" name="OF_CSH">
+         <NamespaceId>CSOF</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2009.1.2.345</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+     <Identifier type="domain" name="PACS_CSH">
+         <NamespaceId>CSPA</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2009.1.2.346</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+     <Identifier type="domain" name="CONTENT_CREATOR_EMDS">
+         <NamespaceId>EMCO</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2009.1.2.348</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+     <Identifier type="domain" name="XDSb_REP_ERC">
+         <NamespaceId>ERXD</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2009.1.2.350</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+     <Identifier type="domain" name="ADT_GE_CENTRICITY_BUSINESS">
+         <NamespaceId>GEAD</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2009.1.2.352</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>     
+     <Identifier type="domain" name="CIS_GE_CENTRICITY_ENTERPRISE">
+         <NamespaceId>GECI</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2009.1.2.355</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+     <Identifier type="domain" name="OF_GE_RIS">
+         <NamespaceId>GEOF</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2009.1.2.358</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+     <Identifier type="domain" name="EHR_GREENWAY">
+         <NamespaceId>GREH</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2009.1.2.360</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+     <Identifier type="domain" name="MSG_ROUTER_HEALTHVISION">
+         <NamespaceId>HEMS</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2009.1.2.365</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+     <Identifier type="domain" name="OTHER_IBM_BRIDGE">
+         <NamespaceId>IBOT</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2009.1.2.370</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+     <Identifier type="domain" name="EHR_MCKESSON">
+         <NamespaceId>MCEH</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2009.1.2.375</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+     <Identifier type="domain" name="EHR_MIE">
+         <NamespaceId>MIEH</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2009.1.2.380</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+     <Identifier type="domain" name="PAT_ID_X_REF_MGR_NIST">
+         <NamespaceId>NIPA</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2009.1.2.383</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+     <Identifier type="domain" name="EHR_NEXTGEN">
+         <NamespaceId>NEEH</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2009.1.2.385</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+     <Identifier type="domain" name="PHR_NMC">
+         <NamespaceId>NMPH</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2009.1.2.390</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+     <Identifier type="domain" name="ADT_PHREESIA">
+         <NamespaceId>PHAD</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2009.1.2.395</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+     <Identifier type="domain" name="EHR_SAGE">
+         <NamespaceId>SAEH</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2009.1.2.400</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+     <Identifier type="domain" name="GATEWAY_SWPARTNERS">
+         <NamespaceId>SWGA</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2009.1.2.405</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+     <Identifier type="domain" name="EHR_SPIRIT">
+         <NamespaceId>TIEH</NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2009.1.2.410</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+
+</Configuration>

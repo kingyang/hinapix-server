@@ -1,0 +1,69 @@
+
+<!-- The PDQ Server Actor Connections -->
+
+<Configuration>
+    <StandardConnection name="misys-pd-supplier">
+        <!--The host name of the PDQ Server-->
+        <HostName>localhost</HostName>
+        <!--The port for PDQ Query transaction-->
+        <Port>4700</Port>
+        <Identifier name="ReceivingApplication">
+            <NamespaceId>EHR_MISYS</NamespaceId>
+        </Identifier>
+        <Identifier name="ReceivingFacility">
+            <NamespaceId>MISYS</NamespaceId>
+        </Identifier>
+
+        
+        <!--To configure each PDQ client, always use type="domain" -->
+        <Identifier type="domain" name="CPR">
+            <NamespaceId>CPR</NamespaceId>
+            <UniversalId></UniversalId>
+            <UniversalIdType></UniversalIdType>
+        </Identifier>
+
+        <Identifier type="domain" name="EMR">
+            <NamespaceId>EMR-MISYSCONNECT</NamespaceId>
+            <UniversalId></UniversalId>
+            <UniversalIdType></UniversalIdType>
+        </Identifier>
+
+        <Identifier type="domain" name="HOMECARE">
+            <NamespaceId>HomeCare</NamespaceId>
+            <UniversalId></UniversalId>
+            <UniversalIdType></UniversalIdType>
+        </Identifier>
+       
+        <!--QueryProperties - (PropertySet) optional:
+             This set of properties specifies global characteristics of the PDQ
+             server over this connection.  The allowed parts are:
+                 WildcardAfter - (String) optional: Specifies the wildcard value this connection
+             expects at the end of a value.  If this value is not supplied, it defaults to *.
+                 WildcardBefore - (String) optional: Specifies the wildcard value this connection
+             expects at the end of a value.   If this value is not supplied, it defaults to *.
+                 ContinuationQueryByOpenPIXPDQ - (boolean) optional: If value=true, the continuation
+             query is handled by OpenPIXPDQ, otherwise by pluggable EMPI. If this value is not 
+             supplier, it defaults to true. 
+                 ContinuationPointerTimeout - (Long) optional: Specifies the timeout in milliseconds
+             of a continuation pointer.  Defaults to 600000 milliseconds(10 minutes). This property
+             is used only when ContinuationQueryByOpenPIXPDQ is set to true.
+              -->
+        <PropertySet name="QueryProperties">
+            <Entry name="WildcardBefore" value="*"/>
+            <Entry name="WildcardAfter" value="*"/>
+            <Entry name="ContinuationQueryByOpenPIXPDQ" value="true"/>
+            <Entry name="ContinuationPointerTimeout" value="6"/>
+        </PropertySet>
+
+
+        <!--DateTimeFormat -(PropertySet) optional:
+             BirthdateFormat - (String) optional: Specifies the format of birthdate this connection
+         expects for a birthdate field.   If this value is not supplied, it defaults to "yyyyMMdd".
+        -->
+        <PropertySet name="DateTimeFormat">
+            <Entry name="Birthdate" value="yyyyMMdd"/>
+        </PropertySet>
+    </StandardConnection>
+
+
+</Configuration>

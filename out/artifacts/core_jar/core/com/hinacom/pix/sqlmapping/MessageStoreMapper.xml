@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hinacom.pix.dao.MessageStoreMapper">
+    <resultMap id="BaseResultMap" type="com.hinacom.pix.po.MessageStore">
+        <id column="Id" property="id" jdbcType="INTEGER"/>
+        <result column="Ip" property="ip" jdbcType="VARCHAR"/>
+        <result column="OutMessage" property="outmessage" jdbcType="VARCHAR"/>
+        <result column="InMessage" property="inmessage" jdbcType="VARCHAR"/>
+        <result column="MessageDate" property="messagedate" jdbcType="DATE"/>
+        <result column="MessageId" property="messageid" jdbcType="VARCHAR"/>
+        <result column="MessageCode" property="messagecode" jdbcType="VARCHAR"/>
+        <result column="TriggerEvent" property="triggerevent" jdbcType="VARCHAR"/>
+        <result column="ErrorMessage" property="errormessage" jdbcType="VARCHAR"/>
+        <result column="SendingFacility" property="sendingfacility" jdbcType="VARCHAR"/>
+        <result column="SendingApplication" property="sendingapplication" jdbcType="VARCHAR"/>
+        <result column="ReceivingApplication" property="receivingapplication" jdbcType="VARCHAR"/>
+        <result column="ReceivingFacility" property="receivingfacility" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    Id, Ip, OutMessage, InMessage, MessageDate, MessageId, MessageCode, TriggerEvent, 
+    ErrorMessage, SendingFacility, SendingApplication, ReceivingApplication, ReceivingFacility
+  </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from MESSAGE_STORE
+        where Id = #{id,jdbcType=INTEGER}
+    </select>
+
+    <select id="selectListByCondition" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from MESSAGE_STORE
+        where 1 = 1
+        <if test="vehicleLengthId != -1">
+            and Ip = ${Ip}
+        </if>
+        <if test="outmessage != null">
+            and OutMessage = ${Outmessage}
+        </if>
+        <if test="inmessage != null">
+            and InMessage = ${Inmessage}
+        </if>
+        <if test="messagedate != null">
+            and MessageDate = ${Messagedate}
+        </if>
+        <if test="messageid != null">
+            and MessageId = ${Messageid}
+        </if>
+        <if test="messagecode != null">
+            and MessageCode = ${Messagecode}
+        </if>
+        <if test="triggerevent != null">
+            and TriggerEvent = ${Triggerevent}
+        </if>
+        <if test="errormessage != null">
+            and ErrorMessage = ${Errormessage}
+        </if>
+        <if test="sendingfacility != null">
+            and SendingFacility = ${Sendingfacility}
+        </if>
+        <if test="sendingapplication != null">
+            and SendingApplication = ${Sendingapplication}
+        </if>
+        <if test="receivingapplication != null">
+            and ReceivingApplication = ${Receivingapplication}
+        </if>
+        <if test="receivingfacility != null">
+            and ReceivingFacility = ${Receivingfacility}
+        </if>
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from MESSAGE_STORE
+    where Id = #{id,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="com.hinacom.pix.po.MessageStore" >
+    insert into MESSAGE_STORE (Ip, OutMessage,
+      InMessage, MessageDate, MessageId, 
+      MessageCode, TriggerEvent, ErrorMessage, 
+      SendingFacility, SendingApplication, ReceivingApplication, 
+      ReceivingFacility)
+    values (#{ip,jdbcType=VARCHAR}, #{outmessage,jdbcType=VARCHAR},
+      #{inmessage,jdbcType=VARCHAR}, #{messagedate,jdbcType=DATE}, #{messageid,jdbcType=VARCHAR}, 
+      #{messagecode,jdbcType=VARCHAR}, #{triggerevent,jdbcType=VARCHAR}, #{errormessage,jdbcType=VARCHAR}, 
+      #{sendingfacility,jdbcType=VARCHAR}, #{sendingapplication,jdbcType=VARCHAR}, #{receivingapplication,jdbcType=VARCHAR}, 
+      #{receivingfacility,jdbcType=VARCHAR})
+  </insert>
+    <insert id="insertSelective" parameterType="com.hinacom.pix.po.MessageStore">
+        insert into MESSAGE_STORE
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                Id,
+            </if>
+            <if test="ip != null">
+                Ip,
+            </if>
+            <if test="outmessage != null">
+                OutMessage,
+            </if>
+            <if test="inmessage != null">
+                InMessage,
+            </if>
+            <if test="messagedate != null">
+                MessageDate,
+            </if>
+            <if test="messageid != null">
+                MessageId,
+            </if>
+            <if test="messagecode != null">
+                MessageCode,
+            </if>
+            <if test="triggerevent != null">
+                TriggerEvent,
+            </if>
+            <if test="errormessage != null">
+                ErrorMessage,
+            </if>
+            <if test="sendingfacility != null">
+                SendingFacility,
+            </if>
+            <if test="sendingapplication != null">
+                SendingApplication,
+            </if>
+            <if test="receivingapplication != null">
+                ReceivingApplication,
+            </if>
+            <if test="receivingfacility != null">
+                ReceivingFacility,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="ip != null">
+                #{ip,jdbcType=VARCHAR},
+            </if>
+            <if test="outmessage != null">
+                #{outmessage,jdbcType=VARCHAR},
+            </if>
+            <if test="inmessage != null">
+                #{inmessage,jdbcType=VARCHAR},
+            </if>
+            <if test="messagedate != null">
+                #{messagedate,jdbcType=DATE},
+            </if>
+            <if test="messageid != null">
+                #{messageid,jdbcType=VARCHAR},
+            </if>
+            <if test="messagecode != null">
+                #{messagecode,jdbcType=VARCHAR},
+            </if>
+            <if test="triggerevent != null">
+                #{triggerevent,jdbcType=VARCHAR},
+            </if>
+            <if test="errormessage != null">
+                #{errormessage,jdbcType=VARCHAR},
+            </if>
+            <if test="sendingfacility != null">
+                #{sendingfacility,jdbcType=VARCHAR},
+            </if>
+            <if test="sendingapplication != null">
+                #{sendingapplication,jdbcType=VARCHAR},
+            </if>
+            <if test="receivingapplication != null">
+                #{receivingapplication,jdbcType=VARCHAR},
+            </if>
+            <if test="receivingfacility != null">
+                #{receivingfacility,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.hinacom.pix.po.MessageStore">
+        update MESSAGE_STORE
+        <set>
+            <if test="ip != null">
+                Ip = #{ip,jdbcType=VARCHAR},
+            </if>
+            <if test="outmessage != null">
+                OutMessage = #{outmessage,jdbcType=VARCHAR},
+            </if>
+            <if test="inmessage != null">
+                InMessage = #{inmessage,jdbcType=VARCHAR},
+            </if>
+            <if test="messagedate != null">
+                MessageDate = #{messagedate,jdbcType=DATE},
+            </if>
+            <if test="messageid != null">
+                MessageId = #{messageid,jdbcType=VARCHAR},
+            </if>
+            <if test="messagecode != null">
+                MessageCode = #{messagecode,jdbcType=VARCHAR},
+            </if>
+            <if test="triggerevent != null">
+                TriggerEvent = #{triggerevent,jdbcType=VARCHAR},
+            </if>
+            <if test="errormessage != null">
+                ErrorMessage = #{errormessage,jdbcType=VARCHAR},
+            </if>
+            <if test="sendingfacility != null">
+                SendingFacility = #{sendingfacility,jdbcType=VARCHAR},
+            </if>
+            <if test="sendingapplication != null">
+                SendingApplication = #{sendingapplication,jdbcType=VARCHAR},
+            </if>
+            <if test="receivingapplication != null">
+                ReceivingApplication = #{receivingapplication,jdbcType=VARCHAR},
+            </if>
+            <if test="receivingfacility != null">
+                ReceivingFacility = #{receivingfacility,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where Id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.hinacom.pix.po.MessageStore">
+    update MESSAGE_STORE
+    set Ip = #{ip,jdbcType=VARCHAR},
+      OutMessage = #{outmessage,jdbcType=VARCHAR},
+      InMessage = #{inmessage,jdbcType=VARCHAR},
+      MessageDate = #{messagedate,jdbcType=DATE},
+      MessageId = #{messageid,jdbcType=VARCHAR},
+      MessageCode = #{messagecode,jdbcType=VARCHAR},
+      TriggerEvent = #{triggerevent,jdbcType=VARCHAR},
+      ErrorMessage = #{errormessage,jdbcType=VARCHAR},
+      SendingFacility = #{sendingfacility,jdbcType=VARCHAR},
+      SendingApplication = #{sendingapplication,jdbcType=VARCHAR},
+      ReceivingApplication = #{receivingapplication,jdbcType=VARCHAR},
+      ReceivingFacility = #{receivingfacility,jdbcType=VARCHAR}
+    where Id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

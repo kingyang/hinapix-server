@@ -1,0 +1,249 @@
+<?xml version="1.0"?>
+<ICS-SQL>
+        <!-- Attribute Types are used for the QUERY-PERSONS tag for WHERE clauses. -->
+        <!-- These are the column names used when querying for a particular Attribute, such as ADDRESS -->
+        <!-- In the Attribute tag (ATTR-#), the # MUST mirror the com.carescience.db.AttributeType numbering -->
+        <!-- COLNAME must include the table alias, common throughout each SQL statement -->
+        <!-- COLTYPE must match ATTR_COLTYPE_ defs in com.carescience.db.jdbc.DatabaseServicesJdbc class -->
+        <!-- 		as String, Number or Date -->
+        <QUERY-ATTRIBUTE-TYPES>
+                <ATTR-1>
+                        <COLNAME>pi.lname</COLNAME>
+                        <COLTYPE>String</COLTYPE>
+                </ATTR-1>
+                <ATTR-2>
+                        <COLNAME>pi.ssn</COLNAME>
+                        <COLTYPE>String</COLTYPE>
+                </ATTR-2>
+                <ATTR-3>
+                        <COLNAME>pi.drv_license_num</COLNAME>
+                        <COLTYPE>String</COLTYPE>
+                </ATTR-3>
+                <ATTR-4>
+                        <COLNAME>pi.address_1</COLNAME>
+                        <COLTYPE>String</COLTYPE>
+                </ATTR-4>
+                <ATTR-5>
+                        <COLNAME>pi.email</COLNAME>
+                        <COLTYPE>String</COLTYPE>
+                </ATTR-5>
+                <ATTR-6>
+                        <COLNAME>pi.lname</COLNAME>
+                        <COLTYPE>LikeString</COLTYPE>
+                </ATTR-6>
+                <ATTR-7>
+                        <COLNAME>pi.search_key</COLNAME>
+                        <COLTYPE>String</COLTYPE>
+                </ATTR-7>
+                <ATTR-8>
+                        <COLNAME>pi.search_key</COLNAME>
+                        <COLTYPE>String</COLTYPE>
+                </ATTR-8>
+                <ATTR-9>
+                        <COLNAME>pi.PI_Identifier</COLNAME>
+                        <COLTYPE>UString</COLTYPE>
+                </ATTR-9>
+                <ATTR-10>
+                        <COLNAME>pi.ethnic_group_cd</COLNAME>
+                        <COLTYPE>String</COLTYPE>
+                </ATTR-10>
+                <ATTR-11>
+                        <COLNAME>pi.gender</COLNAME>
+                        <COLTYPE>String</COLTYPE>
+                </ATTR-11>
+                <ATTR-12>
+                        <COLNAME>pi.marital_status</COLNAME>
+                        <COLTYPE>String</COLTYPE>
+                </ATTR-12>
+
+<!--  NOT USED
+                <ATTR-13>
+                        <COLNAME>dh.SOURCE_DOCUMENTED??????????????????????????</COLNAME>
+                        <COLTYPE>String</COLTYPE>
+                </ATTR-13>
+-->
+                <ATTR-14>
+                        <COLNAME>pi.race_cd</COLNAME>
+                        <COLTYPE>String</COLTYPE>
+                </ATTR-14>
+                <ATTR-15>
+                        <COLNAME>pi.religion_type_cd</COLNAME>
+                        <COLTYPE>String</COLTYPE>
+                </ATTR-15>
+<!--  NOT USED
+                <ATTR-16>
+                        <COLNAME>pp.PHONENUMBER?????????????????????????????</COLNAME>
+                        <COLTYPE>String</COLTYPE>
+                </ATTR-16>
+-->
+		<ATTR-17>
+			<COLNAME>p.person_id</COLNAME>
+			<COLTYPE>Number</COLTYPE>
+		</ATTR-17>
+                <ATTR-18>
+                        <COLNAME>pi.fname</COLNAME>
+                        <COLTYPE>LikeString</COLTYPE>
+                </ATTR-18>
+                <ATTR-19>
+                        <COLNAME>pi.aa_namespace_id</COLNAME>
+                        <COLTYPE>String</COLTYPE>
+                </ATTR-19>
+                <ATTR-20>
+                        <COLNAME>pi.af_namespace_id</COLNAME>
+                        <COLTYPE>String</COLTYPE>
+                </ATTR-20>
+                <ATTR-21>
+                        <COLNAME>pi.corporate_id</COLNAME>
+                        <COLTYPE>String</COLTYPE>
+                </ATTR-21>
+                <ATTR-22>
+                        <COLNAME>pi.updated_corporate_id</COLNAME>
+                        <COLTYPE>String</COLTYPE>
+                </ATTR-22>
+                <ATTR-23>
+                        <COLNAME>pi.dh_id</COLNAME>
+                        <COLTYPE>String</COLTYPE>
+                </ATTR-23>
+                <ATTR-24>
+                        <COLNAME>pi.PI_Identifier</COLNAME>
+                        <COLTYPE>LikeString</COLTYPE>
+                </ATTR-24>
+                <ATTR-25>
+                        <COLNAME>pi.dob</COLNAME>
+                        <COLTYPE>String</COLTYPE>
+                </ATTR-25>                
+
+        </QUERY-ATTRIBUTE-TYPES>
+
+
+        <!-- Used in databaseservices.Query() to retrieve all elements needed to build a Person object -->
+        <!-- CONSTRAINTS AND LIMITATIONS - PLEASE READ IF MODIFYING SQL -->
+        <!-- 1) Column positions MUST remain constant, but names can change if database schema is different -->
+        <!-- 2) Each record returned MUST EQUAL a SINGLE PERSON ALIAS. Many Person Alias's may make up a SINGLE PERSON OBJECT. -->
+        <!--    You cannot have multiple record returned for each attribute (ie: assigning authority and facility domain identifiers must be returned as a single record associated with that Person Alias. They must be denormalized -->
+        <QUERY-GETPERSONS>
+                <!-- Use For DeNormalized Schema -->
+                <SQL-SELECT>select p.person_id, dh.msg_date, dh.msg_ctrl_id, dh.seq_num, dh.cont_ptr, dh.ack_type, dh.app_ack_type, dh.msg_security, dh.rec_app, dh.rec_fac, dh.send_app, dh.send_fac, dh.event_cd, dh.msg_type, dh.trigger_event, dh.msg_structure, p.nationality_cd, pi.search_key, p.primarylanguage_cd, pi.ssn, pi.dob, p.expired, p.isprovider, pi.lname, pi.fname, pi.secname, pi.suffix, pi.prefix, pi.degree, pi.name_type_cd, pi.name_type_rep_cd, pi.search_key, pi.start_date, pi.end_date, pi.alias, pi.address_1, pi.address_2, pi.city, pi.state_prov, pi.zip, pi.country, pi.parish_cd, pi.pa_start_dt, pi.pa_end_dt, pi.pi_identifier_type_cd, pi.pi_effective_date, pi.pi_expiration_date, pi.patient_consent, pi.aa_univ_id, pi.aa_univ_id_type_cd, pi.aa_namespace_id, pi.af_univ_id, pi.af_univ_id_type_cd, pi.af_namespace_id, pi.telecom_use_cd, pi.phone_country_cd, pi.phone_area_cd, pi.phone_num, pi.phone_ext, pi.email, pi.gender, pi.marital_status, pi.drv_license_num, pi.drv_license_issuing_state, pi.drv_license_issue_date, pi.ethnic_group_cd, pi.religion_type_cd, pi.race_cd, pi.pi_identifier, p.maiden_lname, p.maiden_fname, p.maiden_secname, p.maiden_suffix, p.maiden_prefix, p.maiden_degree, p.maiden_name_type_cd, p.maiden_name_type_rep_cd, p.maiden_search_key, p.birthplace, dh.dh_id, pi.person_info_id, pi.corporate_id, pi.updated_corporate_id</SQL-SELECT>
+                <SQL-FROM>from document_header dh, person_info pi, person p</SQL-FROM>
+                <SQL-JOIN>where dh.dh_id = pi.dh_id and dh.person_id = p.person_id and p.person_id in (select p.person_id from document_header dh, person_info pi, person p where  p.person_id = dh.person_id and dh.dh_id = pi.dh_id</SQL-JOIN>
+        </QUERY-GETPERSONS>
+
+        <!-- Used for inserting a new Person object into the database, using various tables defined here. -->
+        <!-- The following 3 tables are expected for adding a Person: PERSON, DOCUMENT_HEADER (1-many with PERSON), -->
+        <!-- and PERSON_INFO (1-many with DOCUMENT_HEADER). -->
+        <!-- CONSTRAINTS AND LIMITATIONS - PLEASE READ IF MODIFYING SQL -->
+        <!-- 1) Column positions MUST remain constant, but names can change if database schema is different -->
+        <INSERT-PERSON>
+                <SQL-GET-PREINSERTID></SQL-GET-PREINSERTID>
+                <SQL-INSERTINTO>insert into person (nationality_cd, namesearchkey, primarylanguage_cd, expired, isprovider, maiden_lname, maiden_fname, maiden_secname, maiden_suffix, maiden_prefix, maiden_degree, maiden_name_type_cd, maiden_name_type_rep_cd, maiden_search_key, birthplace)</SQL-INSERTINTO>
+                <SQL-INSERTVALUES>values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)</SQL-INSERTVALUES>
+                <SQL-GET-POSTINSERTID>select @@IDENTITY</SQL-GET-POSTINSERTID>
+        </INSERT-PERSON>
+        <INSERT-DOCUMENT-HEADER>
+                <SQL-GET-PREINSERTID></SQL-GET-PREINSERTID>
+                <SQL-INSERTINTO>insert into document_header (person_id, msg_date, msg_ctrl_id, seq_num, cont_ptr, ack_type, app_ack_type, msg_security, rec_app, rec_fac, send_app, send_fac, event_cd, msg_type, trigger_event, msg_structure)</SQL-INSERTINTO>
+                <SQL-INSERTVALUES>values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)</SQL-INSERTVALUES>
+                <SQL-GET-POSTINSERTID>select @@IDENTITY</SQL-GET-POSTINSERTID>
+        </INSERT-DOCUMENT-HEADER>
+        <INSERT-PERSON-INFO>
+                <SQL-GET-PREINSERTID></SQL-GET-PREINSERTID>
+                <SQL-INSERTINTO>insert into person_info ( dh_id, lname, fname, secname, suffix, prefix, degree, name_type_cd, name_type_rep_cd, search_key, start_date, end_date, alias, address_1, address_2, city, state_prov, zip, country, parish_cd, pa_start_dt, pa_end_dt, telecom_use_cd, phone_country_cd, phone_area_cd, phone_num, phone_ext, email, gender, marital_status, drv_license_num, drv_license_issuing_state, drv_license_issue_date, ethnic_group_cd, religion_type_cd, race_cd, pi_identifier_type_cd, pi_effective_date, pi_expiration_date, patient_consent, address_type_cd, aa_univ_id, aa_univ_id_type_cd, aa_namespace_id, af_univ_id, af_univ_id_type_cd, af_namespace_id, pi_identifier,ssn,dob,corporate_id)</SQL-INSERTINTO>
+                <SQL-INSERTVALUES>values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?,?)</SQL-INSERTVALUES>
+                <SQL-GET-POSTINSERTID>select @@IDENTITY</SQL-GET-POSTINSERTID>
+        </INSERT-PERSON-INFO>
+
+        <!-- Used for capturing correlation and database events from corresponding listeners, and inserting
+             into the ICS_EVENT_LOG table.
+          -->
+        <INSERT-EVENT-LOG>
+                <SQL-GET-PREINSERTID></SQL-GET-PREINSERTID>
+                <SQL-INSERTINTO>insert into ics_event_log ( event_type, event_date, current_person_id, current_person_ssn, current_person_dob, alt_person_id, alt_person_ssn, alt_person_dob, reason, user_id)</SQL-INSERTINTO>
+                <SQL-INSERTVALUES>values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)</SQL-INSERTVALUES>
+        </INSERT-EVENT-LOG>
+
+
+        <!-- These are associated with UPDATING A PERSON TABLE. All other updates to attributes (address, document header, etc..)
+             will result in a new record. So this table is the only one where fields are updated.
+             <ATTR-#> is associated DIRECTLY with DatabaseServicesJdbc.UPDATEFLD_#.
+             Type can be String, Number or Date.
+          -->
+        <UPDATE-ATTRIBUTE-TYPES>
+                <ATTR-0>
+                        <COLNAME>expired</COLNAME>
+                        <COLTYPE>Number</COLTYPE>
+                </ATTR-0>
+
+                <ATTR-1>
+                        <COLNAME>nationality_cd</COLNAME>
+                        <COLTYPE>String</COLTYPE>
+                </ATTR-1>
+
+                <ATTR-2>
+                        <COLNAME>primarylanguage_cd</COLNAME>
+                        <COLTYPE>String</COLTYPE>
+                </ATTR-2>
+
+                <ATTR-3>
+                        <COLNAME>birthplace</COLNAME>
+                        <COLTYPE>String</COLTYPE>
+                </ATTR-3>
+
+                <!-- (Maidenname) PERSONNAME - this is an attribute with multiple columns -->
+                <ATTR-4>
+                        <FNAME>maiden_fname</FNAME>
+                        <FNAMETYPE>String</FNAMETYPE>
+                        <LNAME>maiden_lname</LNAME>
+                        <LNAMETYPE>String</LNAMETYPE>
+                        <SECNAME>maiden_secname</SECNAME>
+                        <SECNAMETYPE>String</SECNAMETYPE>
+                        <SUFFIX>maiden_suffix</SUFFIX>
+                        <SUFFIXTYPE>String</SUFFIXTYPE>
+                        <PREFIX>maiden_prefix</PREFIX>
+                        <PREFIXTYPE>String</PREFIXTYPE>
+                        <DEGREE>maiden_degree</DEGREE>
+                        <DEGREETYPE>String</DEGREETYPE>
+                        <NAMETYPE>maiden_name_type_cd</NAMETYPE>
+                        <NAMETYPETYPE>String</NAMETYPETYPE>
+                        <NAMETYPEREP>maiden_name_type_rep_cd</NAMETYPEREP>
+                        <NAMETYPEREPTYPE>String</NAMETYPEREPTYPE>
+                        <SEARCHKEY>maiden_search_key</SEARCHKEY>
+                        <SEARCHKEYTYPE>String</SEARCHKEYTYPE>
+                </ATTR-4>
+
+        </UPDATE-ATTRIBUTE-TYPES>
+
+        <!-- Used in DatabaseServicesJdbc.updatePerson() to supply UPDATE and WHERE clauses.
+             SET clauses will be done dynamically using above attributes for column names.
+          -->
+        <UPDATE-PERSON>
+          <SQL-UPDATETABLE>update person</SQL-UPDATETABLE>
+          <SQL-UPDATEWHERE>where person_id = ?</SQL-UPDATEWHERE>
+        </UPDATE-PERSON>
+
+        <!-- Used by PersonInfoSql.updatePatientConsent() method
+             This will add on an IN clause restricting by Document Headers (associated with a Person_Id)
+          -->
+        <UPDATE-PERSON-INFO-CONSENT>
+          <SQL-UPDATETABLE>update person_info</SQL-UPDATETABLE>
+          <SQL-SETTABLE>set patient_consent = ?</SQL-SETTABLE>
+          <SQL-UPDATEWHERE>where UPPER(pi_identifier) = UPPER(?)</SQL-UPDATEWHERE>
+        </UPDATE-PERSON-INFO-CONSENT>
+
+        <!-- Used by PersonSql, PersonInfoSql and DocumentHeaderSql delete() methods.
+          -->
+        <DELETE-PERSON>
+          <SQL-DELETE>delete from person where person_id = ?</SQL-DELETE>
+        </DELETE-PERSON>
+
+        <DELETE-PERSON-INFO>
+          <SQL-DELETE>delete from person_info where person_info_id = ?</SQL-DELETE>
+        </DELETE-PERSON-INFO>
+
+        <DELETE-DOCUMENT-HEADER>
+          <SQL-DELETE>delete from document_header where dh_id = ?</SQL-DELETE>
+        </DELETE-DOCUMENT-HEADER>
+
+        <DELETE-DOCUMENT-HEADER-FROM-PERSON-INFO>
+          <SQL-DELETE>delete from document_header where dh_id in (select dh_id from person_info where person_info_id = ?)</SQL-DELETE>
+        </DELETE-DOCUMENT-HEADER-FROM-PERSON-INFO>
+</ICS-SQL>

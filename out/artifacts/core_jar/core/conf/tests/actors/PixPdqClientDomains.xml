@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- The Domain of Each PIX and PDQ Client -->
+
+<Configuration>
+    <!--To configure each PIX/PDQ client, always use type="domain" -->
+    <Identifier type="domain" name="CPR">
+        <NamespaceId>CPR</NamespaceId>
+        <UniversalId>1</UniversalId>
+        <UniversalIdType>2</UniversalIdType>
+    </Identifier>
+
+    <Identifier type="domain" name="EMR">
+        <NamespaceId>EMR-MISYSCONNECT</NamespaceId>
+        <UniversalId>3</UniversalId>
+        <UniversalIdType>4</UniversalIdType>
+    </Identifier>
+
+    <Identifier type="domain" name="HOMECARE">
+        <NamespaceId>HomeCare</NamespaceId>
+        <UniversalId>5</UniversalId>
+        <UniversalIdType>6</UniversalIdType>
+    </Identifier>
+
+    <Identifier type="domain" name="WESTCLINIC">
+        <NamespaceId>WESTCLINIC</NamespaceId>
+        <UniversalId>1.2234.634325.5734</UniversalId>
+        <UniversalIdType>ISO</UniversalIdType>
+    </Identifier>
+
+    <Identifier type="domain" name="SOUTHLAB">
+        <NamespaceId>SOUTH LAB</NamespaceId>
+        <UniversalId>1.2234.634325.74325</UniversalId>
+        <UniversalIdType>ISO</UniversalIdType>
+    </Identifier>
+
+    <Identifier type="domain" name="HinaTest1">
+        <NamespaceId>HinaTest1</NamespaceId>
+        <UniversalId>2.16.840.1.113883.3.72.5.9.1401</UniversalId>
+        <UniversalIdType>ISO</UniversalIdType>
+    </Identifier>
+
+    <Identifier type="domain" name="HinaTest2">
+        <NamespaceId>HinaTest2</NamespaceId>
+        <UniversalId>2.16.840.1.113883.3.72.5.9.1402</UniversalId>
+        <UniversalIdType>ISO</UniversalIdType>
+    </Identifier>
+
+    <Identifier type="domain" name="HinaTest3">
+        <NamespaceId>HinaTest3</NamespaceId>
+        <UniversalId>2.16.840.1.113883.3.72.5.9.1403</UniversalId>
+        <UniversalIdType>ISO</UniversalIdType>
+    </Identifier>
+
+
+    <Identifier type="domain" name="NIST2010">
+        <NamespaceId>NIST2010</NamespaceId>
+        <UniversalId>2.16.840.1.113883.3.72.5.9.1</UniversalId>
+        <UniversalIdType>ISO</UniversalIdType>
+    </Identifier>
+
+    <Identifier type="domain" name="NIST2010-2">
+        <NamespaceId>NIST2010-2</NamespaceId>
+        <UniversalId>2.16.840.1.113883.3.72.5.9.2</UniversalId>
+        <UniversalIdType>ISO</UniversalIdType>
+    </Identifier>
+
+    <Identifier type="domain" name="NIST2010-3">
+        <NamespaceId>NIST2010-3</NamespaceId>
+        <UniversalId>2.16.840.1.113883.3.72.5.9.3</UniversalId>
+        <UniversalIdType>ISO</UniversalIdType>
+    </Identifier>
+
+    <Identifier type="domain" name="IHE2010">
+        <NamespaceId>IHE2010</NamespaceId>
+        <UniversalId>1.3.6.1.4.1.21367.2010.1.1</UniversalId>
+        <UniversalId>1.3.6.1.4.1.21367.2010.1.1</UniversalId>
+        <UniversalIdType>ISO</UniversalIdType>
+    </Identifier>
+
+
+    <Identifier type="domain" name="LABADT">
+        <NamespaceId>LABADT</NamespaceId>
+        <UniversalId>1.3.6.1.4.1.21367.2005.13.20.3000</UniversalId>
+        <UniversalIdType>ISO</UniversalIdType>
+    </Identifier>
+
+</Configuration>
